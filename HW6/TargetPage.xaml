@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HW6.TargetPage"
+             xmlns:hw6="clr-namespace:HW6;assembly=HW6">
+    <ContentPage.Content>
+        
+        <RelativeLayout>
+            <BoxView Color="{Binding RandColor}"
+                     RelativeLayout.XConstraint=
+                     "{ConstraintExpression Type=Constant,
+                                        Constant=100}"
+                     RelativeLayout.YConstraint=
+                     "{ConstraintExpression Type=Constant,
+                                        Constant=100}" >
+                <BoxView.BindingContext>
+                    <hw6:ColorVM/>
+                </BoxView.BindingContext>
+            </BoxView>
+            <Button Text="Click me!"
+                RelativeLayout.XConstraint=
+                     "{ConstraintExpression Type=Constant,
+                                        Constant=150}"
+                     RelativeLayout.YConstraint=
+                     "{ConstraintExpression Type=Constant,
+                                        Constant=150}"
+                     Clicked="OnButtonClicked"></Button>
+        </RelativeLayout>
+
+    </ContentPage.Content>
+</ContentPage>

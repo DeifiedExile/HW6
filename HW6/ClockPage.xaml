@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:hw6="clr-namespace:HW6;assembly=HW6"
+             mc:Ignorable="d"
+             x:Class="HW6.ClockPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="hourLabel"
+                   Text="{Binding DateTime.Hour, StringFormat='{0:D}'}"
+                   FontSize="Large"
+                   HorizontalOptions="Center">
+                <Label.BindingContext>
+                    <hw6:ClockVM />
+                </Label.BindingContext>
+            </Label>
+            <Label x:Name="minuteLabel"
+                   Text="{Binding DateTime.Minute, StringFormat='{0:D}'}"
+                   FontSize="Large"
+                   HorizontalOptions="Center">
+                <Label.BindingContext>
+                    <hw6:ClockVM />
+                </Label.BindingContext>
+                </Label>
+            <Label x:Name="secondLabel"
+                   Text="{Binding DateTime.Second, StringFormat='{0:D}'}"
+                   FontSize="Large"
+                   HorizontalOptions="Center">
+                <Label.BindingContext>
+                    <hw6:ClockVM />
+                </Label.BindingContext>
+                </Label>
+            
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
